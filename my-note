@@ -1,0 +1,485 @@
+
+GUI -> Command Line
+ls -> list
+cd -> Change Directroy (No folder)
+
+
+## tab completion
+
+cd first-<tab>
+
+## path
+
+abs path
+rel path
+
+##pkg
+
+git
+
+sudo apt-get install git-core
+
+wget 122.115.61.189/tmp/cc-note
+
+## LGCB
+
+http://happypeter.github.com/LGCB
+http://github.com/happypeter/cc-note.git
+
+##for fun
+serach "the pretty reckless"
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.21<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#vim
+##vim mode
+
+ 	:h vim-modes  进入vim得文档
+save and quit
+ 	：w 写入保存
+ 	：q 退出
+ 	：wq 保存退出
+ 	：q!不保存就退出
+
+i/Esc  插入和命令切换
+h:  left
+j:  down
+k:  up
+l:  right
+
+vimtutor  命令  进入vim教程
+
+以 "." 开头是隐藏文件
+ls -a  查看所有文件（包括隐藏文件） 
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<2010.3.22<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+go to "github.com"
+
+git clone https://github.com/happypeter/cc-note.git 
+
+git pull  更新
+
+sudo apt-get install markdown
+
+### Markdown  从文本转换成html
+  #h1  一级标题
+  ##h2  二级标题
+  __bold__  粗体
+  _it_    斜体
+
+安装软件就是把软件放到/bin中
+将写好bash程序放到/bin中
+
+chmod +x filename
+sudo mv  filename /bin
+
+就可以执行了
+把filename中的文件以html打开
+Markdown.pl filename > filename.html
+firefox filename.html
+
+unzip 命令解压.zip包
+tar xzvf filename.gz
+解压.gz的包
+
+如果是文件绿色的就是有执行权现
+
+mv ：1.移动
+     2.改名
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.23<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+##安装tig
+
+下一个tig包 解压
+跳到文件夹下
+安装tig.c文件
+./configure
+make
+sudo make install
+
+
+在man里 /-x   表示查找-x
+推出man用 q
+
+diff -u h.c hh.c > ddd.diff	
+
+ git init git的初始化产生仓库
+
+##git的使用 
+
+ 2018  git init
+ 2019  ls -a
+ 2020  git add h.c
+ 2021  git commit -a -m "first verson"
+ 2022  tig
+ 2023  ls
+ 2024  vim h.c
+ 2025  ls
+ 2026  git diff
+ 2027  tig
+ 2028  history
+
+dong@dong-laptop:~/test$ mkdir poj
+dong@dong-laptop:~/test$ cd poj/
+dong@dong-laptop:~/test/poj$ ls
+dong@dong-laptop:~/test/poj$ 
+dong@dong-laptop:~/test/poj$ ls -a
+.  ..
+dong@dong-laptop:~/test/poj$ git init
+Initialized empty Git repository in /home/dong/test/poj/.git/
+dong@dong-laptop:~/test/poj$ ls -a
+.  ..  .git //poj相当于一个git库
+dong@dong-laptop:~/test/poj$ vim h.c
+dong@dong-laptop:~/test/poj$ ls
+h.c
+dong@dong-laptop:~/test/poj$ git add h.c 
+dong@dong-laptop:~/test/poj$ git commit -a -m "first version"
+dong@dong-laptop:~/test/poj$ tig
+dong@dong-laptop:~/test/poj$ vim h.c   // 进行修改
+dong@dong-laptop:~/test/poj$ git diff
+diff --git a/h.c b/h.c
+index a9534b1..3d53c3d 100644
+--- a/h.c
++++ b/h.c
+@@ -1 +1,2 @@
+-iiii
++iii
++dsjkalfi
+
+
+
+##老师的视频
+dong@dong-laptop:~/cc-note$ totem git_start.ogv 
+
+### ~/.gitconfig
+
+    [user]
+    name = Charles_dong
+    email = happypeter1983@gmail.com
+    [core]
+    editor = vim
+    [alias]
+    ci = commit -a -v
+    co = checkout
+    st = status
+    br = branch
+    throw = reset --hard HEAD      //删除没有生成新版本的时 的垃圾文件
+    throwh = reset --hard HEAD^    //删除新版本
+    [color]
+    ui = true
+
+    [commit]
+    template = ./.commit-template
+    [push]
+    default = current
+
+dong@dong-laptop:~/test/dong$ git init
+dong@dong-laptop:~/test/dong$ vim aaa.c    // 新建aaa.h文件
+dong@dong-laptop:~/test/dong$ git add aaa.c
+dong@dong-laptop:~/test/dong$ git ci       //生成第一个版本
+dong@dong-laptop:~/test/dong$ vim aaa.c    //修改aaa。h文件 
+dong@dong-laptop:~/test/dong$ git ci       //生成第二个版本
+dong@dong-laptop:~/test/dong$ git throwh   //把最新版本丢弃（即第二版本）
+
+git throw    //去掉垃圾修改  在没定义版本之前
+git checkout + 版本号  回到该版本号的那个状态
+
+vim 
+
+在插入模式下 缩进
+Ctrl + t   Ctrl + d
+
+:h motion.txt  查看快捷键文档
+在命令行下
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.25<<<<<<<<<<<<<<<<<<<<<<<<<
+
+##vim 配置文件：
+
+在home目录下  
+dong@dong-laptop:~$ vim .vimrc
+在 .vimrc中写
+set nu          //添加行号
+set autoindent // 添加缩进
+
+查看vim的帮助文档
+：h XXXXX
+
+##脚本语言（scipt）：
+
+一般是解释型语言。（省略几个字）
+例如：bash脚本 ， 在bash中运行 ， 小规模的
+
+依赖某个程序执行的
+
+配置vim脚本：
+
+go to github   搜索peter-vim
+老师的vim说明
+http://happypeter.github.com/GitBeijing/vim-conf-share.html
+
+git clone git://github.com/happypeter/peter-vim.git
+cd  #goto your $HOME
+mv peter-vim .vim #have the right name
+cd .vim/
+vim README # check the readme to know more
+
+：/  查找  nn是查找下一处
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.26<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+dong@dong-laptop:~/.vim/snippets$ vim c.snippets
+下午休息
+qq群  145480933
+##ctags c标签
+
+先运行 ：ctags filename
+Ctrl + ] 到函数定义处
+Ctrl + o 回到函数调用
+
+#在函数调用处：
+
+##在插入模式：
+Ctrl + n 写函数调用 补齐
+Ctrl + x + l  补齐全行
+Ctrl + x + k  英文单词补齐
+Ctrl + x + f  补齐文件名(补齐当前文件夹下的文件)
+,ss     自动检查文件单词错误（在.c文件中只检查注释）
+
+##在命令行下：
+yy       复制一行
+nyy      将n行的内容放入临时缓冲区
+p        将临时缓冲区中的文本放入光标后
+P        将临时缓冲区中的文本放入光标前
+dd       删除一行
+cc       修改一行
+A        到行尾
+u        撤消最后一次修改
+Ctrl ＋ r  和u互逆
+U        撤消当前行的所有修改
+b        移到前一个字的开头
+w        移到后一个字的开头
+e        移到下一个字的结尾
+gg       移动到第一行
+G        移动到最后一行
+dG       删除当前行到最后一行
+Ga       到行文件末进行插入
+o        在当前行的下边插入新行
+O        在当前行的上边插入新行
+x        删除光标处的字符，可以在x前加上需要删除的字符数目
+X        删除光标前的字符，可以在X前加上需要删除的字符数目
+.        重复最后一次修改
+:e!      放弃所有修改，从上次保存文件开始再编辑
+:set ai  打开自动缩进
+J        将下一行连接到当前行的末尾
+gg=G     缩进
+V        把当前行反色选中当前行 可以上下移动
+Ctrl ＋ v 选中块
+vimdiff file1 file2 查看两个文件的区别
+dong@dong-laptop:~/testfile$ vimdiff te.sh a.sh
+:DiffSaved   查看硬盘和内存上的文件的区别
+:vnew filename
+一般用来查看头文件和文件的联系
+Ctrl + ww   切换窗口
+:bd   关闭窗口
+diff -u ab abcde  查看两个文件的区别
+
+dong@dong-laptop:~/testfile/dong$ ctags hello.* main.c 
+dong@dong-laptop:~/testfile/dong$ ls
+hello.c  hello.h  main.c  tags
+dong@dong-laptop:~/testfile/dong$ vim -t main  ///直接跳到main函数中
+
+gd  Ctrl+o 查看变量 在一个文件中
+gD  Ctrl+o 查看全局变量
+在vim中 ,t  打开列表  相当与vc6中的列表
+,n 打开文件列表
+,e 打开.vimrc 文件
+:ls 查看打开几个buffer
+Ctrl+c 注释选中行
+以后学 Cscope  一个增强般的从tags
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.27<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+##git 生成过程
+
+dong@dong-laptop:~$ cd .ssh
+bash: cd: .ssh: 没有那个文件或目录
+dong@dong-laptop:~$ ssh-keygen -t rsa -C "ubnutu_dong111@163.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/dong/.ssh/id_rsa): 
+Created directory '/home/dong/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/dong/.ssh/id_rsa.
+Your public key has been saved in /home/dong/.ssh/id_rsa.pub.
+The key fingerprint is:
+aa :37:18:a6:33:3c:02:9f:41:8f:d2:4d:08:4b:30:0d ubnutu_dong111@163.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|Eo               |
+|.o.              |
+|.o .             |
+|. o .            |
+| o =    S        |
+|o + =  .         |
+|.+ = o.          |
+|. O ..o          |
+| . +.. .         |
++-----------------+
+dong@dong-laptop:~$ cd .ssh
+dong@dong-laptop:~/.ssh$ ls
+id_rsa  id_rsa.pub
+dong@dong-laptop:~/.ssh$ gedit id_rsa.pub
+dong@dong-laptop:~/.ssh$ ssh git@github.com
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+PTY allocation request failed on channel 0
+Hi Charlesdong! You've successfully authenticated, but GitHub does not provide shell access.
+                                                                                            Connection to github.com closed.
+
+#branch
+
+##查看分支
+
+dong@dong-laptop:~/cc-note$ git branch         //查看分支
+  master
+* new_branch_name
+
+//回到历史
+//新建一个branch叫做tmp
+
+dong@dong-laptop:~/cc-note$ git checkout  ddd018f5e9d64c6e63f2ace08a5a59296ac52212  -b tmp
+Switched to a new branch 'tmp'
+
+//回到master
+
+dong@dong-laptop:~/cc-note$ git checkout master
+Switched to branch 'master'
+
+dong@dong-laptop:~/cc-note$ git branch   //查看分支
+* master
+  new_branch_name
+  tmp
+  ttt
+
+dong@dong-laptop:~/cc-note$ git checkout ttt
+Switched to branch 'ttt'
+
+dong@dong-laptop:~/cc-note$ man git checkout     //查看
+
+dong@dong-laptop:~/cc-note$ git branch -D ttt   //删除分支
+Deleted branch ttt (was 15b71fd).
+
+//把某一分支改为master
+//当删除老的master时，那新的master和老master之间的版本在本地就找不回来了
+git br -D master
+git checkout + 该分支版本号 + -b master
+
+写的脚本程序放到／bin中
+在执行时直接写该程序的名字
+
+bash 脚本:
+for循环：
+//将所有文件都加上.c
+
+  1 for file in `ls`
+  2 do
+  3     mv $file $file.c
+  4 done
+  ｀｀： 中的内容相当于拿到bash中执行再那回到bash脚本程序中
+//再改回来
+  1 for file in `ls`
+  2 do
+  3     short_name=`echo $file|awk -F'.' '{print $1}'`
+  4     mv $file $short_name
+  5 done
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.29<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+#查找（locate）
+
+find .|grep stdlib.h  // 到硬盘去找
+
+dong@dong-laptop:/$ locate stdlib.h  ///查找stdlib.h  到数据库去找
+locate    //去数据库查找信息  
+updatedb  命令更新数据库
+
+＊＊＊＊＊＊＊＊＊
+locate 命令一般只查找系统文件，不查找用户文件
+find .|grep filename  查找用户文件
+grep  是字符串匹配
+
+find  和 grep一起用
+＊ ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+xxx 是查找文件中的字符串命令 
+xxx 主要是查找文件里的字符串
+xxx ＋ 字符串
+不能查找文件夹 
+将会输出文件和相应的字符串
+
+只查找当前目录和子文件夹的文件的字符串
+对他上一级目录不查找
+＊尽量缩小范围
+
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+dong@dong-laptop:~/test$ git clone https://github.com/happypeter/hen.git
+dong@dong-laptop:~/test/hen$ ls
+auth_for_yum  flv-mp3  html-creator  php     search  vim-player  wiki
+C             general  MoinToMuse    README  socket  web         yantai-net
+dong@dong-laptop:~/test/hen$ cd search/
+dong@dong-laptop:~/test/hen/search$ ls
+curse  search.vim  wiki  xxx
+dong@dong-laptop:~/test/hen/search$ sudo cp xxx /bin
+[sudo] password for dong: 
+dong@dong-laptop:~/test/dong$ xxx peter
+ NO.1:./b:1
+    hahhapeterh
+ NO.2:./a:1
+    peter
+*******************************************************************
+grep(查找字符串):
+
+ps aux  查看进程
+ps aux|grep -i  + 字符串         //－i  忽略大小写
+kill 杀死进程
+kill -9 + 进程号  杀死进程
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.30<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+gcc -I/path/to/header/    gcc查找
+
+dong@dong-laptop:~$ dpkg -S stdlib.h    //查找包名   
+libc6-dev: /usr/include/stdlib.h
+
+sudo apt-get install + libc6-dev
+
+zf 折叠
+zc 和上
+zx 打开
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<2011.3.31<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+＃重定向 >
+
+把要打到屏幕上的东西重定向的一个文件中保存起来
+当要存储东西的时候就会用到重定向
+dong@dong-laptop:~/testfile/dong$ ls >file
+
+管道 ｜
+把打到strout的东西重定向到strin，以供下一个命令的输入
+dong@dong-laptop:/bin$ find .|grep ls
+./lsmod
+./ls
+./false
+dong@dong-laptop:/bin$ ls /bin/ |grep zip
+bunzip2
+bzip2
+bzip2recover
+gunzip
+gzip
+
+ 老师的项目
+github  edocs文件
+
